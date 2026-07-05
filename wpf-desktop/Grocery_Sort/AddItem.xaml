@@ -1,0 +1,56 @@
+﻿<Window x:Class="Grocery_Sort.AddItem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Grocery_Sort"
+        mc:Ignorable="d"
+        Title="AddItem" Height="250" Width="450"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="#fcf4ed">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" x:Name="Add" Text="Add Item" Foreground="#222" HorizontalAlignment="Left" FontSize="18" FontWeight="Bold" Padding="5"/>
+
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding CurrentList.Name}" TextWrapping="WrapWithOverflow" HorizontalAlignment="Left" Foreground="#222" VerticalAlignment="Center" FontSize="18" FontWeight="Bold" Padding="5" />
+
+        <TextBlock Grid.Row="0" Grid.Column="2" Text="{Binding CurrentList.Layout.Name}" TextWrapping="WrapWithOverflow" HorizontalAlignment="Left" Foreground="#222" VerticalAlignment="Center" FontSize="18" FontWeight="Bold" Padding="5" />
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Item Name:" VerticalAlignment="Bottom" FontSize="12" Foreground="#222" Margin="5,0,0,0"/>
+        <Border Grid.Row="2" Grid.Column="0" Height="50" Margin="0,0,5,0">
+            <TextBox  x:Name="EnterItem" Width="Auto" Margin="5" FontSize="13" VerticalContentAlignment="Center" Foreground="#222" Background="#fffff9"/>
+        </Border>
+
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Amount:" VerticalAlignment="Bottom" FontSize="12" Foreground="#222" Margin="5,0,0,0"/>
+        <Border Grid.Row="2" Grid.Column="1" Height="50" Margin="0,0,5,0">
+            <TextBox  x:Name="EnterAmount" Width="Auto" Margin="5" FontSize="13" VerticalContentAlignment="Center" Foreground="#222" Background="#fffff9"/>
+        </Border>
+
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="Category:" VerticalAlignment="Bottom" FontSize="12" Foreground="#222" Margin="5,0,0,0"/>
+        <ComboBox Grid.Row="2" Grid.Column="2" ItemsSource="{Binding CurrentList.Layout.Categories}" x:Name="SelectedCategory" Foreground="#222" 
+                  FontSize="13" Margin="5" Height="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                  IsEditable="True" IsReadOnly="True" Background="#fffff9">
+        </ComboBox>
+
+        <Button Grid.Row="3" Grid.Column="0" Content="OK" Click="OK_Click" FontSize="13" Width="120" Height="40" Padding="0,5,0,5" HorizontalAlignment="Left" Margin="10,0,0,0" Foreground="#222" Background="#dbcaba"/>
+
+        <Button Grid.Row="3" Grid.Column="1" Content="Cancel" Click="Cancel_Click" FontSize="13" Width="80" Height="30" Padding="0,5,0,5" HorizontalAlignment="Right" 
+                VerticalAlignment="Center" Margin="0,10,10,0" Foreground="#222" Background="#dbcaba"/>
+
+        <Button Grid.Row="3" Grid.Column="2" Content="Next Item" Click="AddItem_Click" FontSize="13" Width="Auto" Height="40" Padding="0,5,0,5" Margin="5" Background="#dbcaba" Foreground="#222"/>
+
+    </Grid>
+</Window>
+

@@ -1,0 +1,53 @@
+Store Layouts:
+
+            /*Layout1 = new StoreLayout
+            {
+                Name = "Layout 1",
+                Categories = new ObservableCollection<string>
+                {
+                    "Fruits",
+                    "Vegetables",
+                    "Bakery",
+                    "Meat",
+                    "Dairy",
+                    "Sweets",
+                    "Drinks",
+                    "Frozen",
+                    "Other"
+                }
+            };
+
+            Layout2 = new StoreLayout
+            {
+                Name = "Layout 2",
+                Categories = new ObservableCollection<string>
+                {
+                    "Fruits",
+                    "Vegetables",
+                    "Dairy",
+                    "Drinks",
+                    "Bakery",
+                    "Meat",
+                    "Snacks",
+                    "Pantry",
+                    "Canned Goods",
+                    "Household",
+                    "Frozen"
+                }
+            };
+
+            Layout3 = new StoreLayout
+            {
+                Name = "Layout 3",
+                Categories = new ObservableCollection<string>
+                {
+                    "Shampoo",
+                    "Bodywash",
+                    "Skincare",
+                    "Make-Up",
+                    "Sanitary Products",
+                    "Cleaning",
+                    "Perfumes",
+                    "Health"
+                }
+            };*/
